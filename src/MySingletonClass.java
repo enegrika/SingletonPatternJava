@@ -4,16 +4,18 @@ public class MySingletonClass {
 
     private static MySingletonClass instance;
 
-    // делаем конструктор класса ПРИВАТНЫМ чтобы пользователь не смог создать
-    // чтобы пользователь не смог создать экземпляр класса с помощью оператора new
+    // делаем конструктор класса ПРИВАТНЫМ, чтобы пользователь
+    // не смог создать экземпляр класса с помощью оператора new
+    
     private MySingletonClass(String name) {
         this.name = name;
     }
 
 
     // с помощью ПУБЛИЧНОГО СТАТИЧЕСКОГО МЕТОДА МЫ получаем наш Единственный объект
-    //
+    
     public static MySingletonClass getInstance(String name) {
+        
         // создаем впервые объект , если он еще не создан
         if (instance == null) {
             instance = new MySingletonClass(name);
@@ -31,6 +33,8 @@ public class MySingletonClass {
 
 }
 
+
+// ТЕСТИРУЕМ :
 class Test {
     public static void main(String[] args) {
         MySingletonClass m1 = MySingletonClass.getInstance("Привет");
