@@ -35,6 +35,7 @@ public class MySingletonClass {
 
 
 // ТЕСТИРУЕМ :
+
 class Test {
     public static void main(String[] args) {
         MySingletonClass m1 = MySingletonClass.getInstance("Привет");
