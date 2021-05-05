@@ -13,8 +13,8 @@ public class MySingletonClass {
 
 
     // с помощью ПУБЛИЧНОГО СТАТИЧЕСКОГО МЕТОДА МЫ получаем наш Единственный объект
-    
-    public static MySingletonClass getInstance(String name) {
+    // add SYNCHRONIZED word to ALLOW ONLY ONE THREAD to execute at any given time
+    public static synchronized MySingletonClass getInstance(String name) {
         
         // создаем впервые объект , если он еще не создан
         if (instance == null) {
